@@ -1,0 +1,129 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #555;
+}
+
+.navbar nav a.active,
+.navbar nav a:hover {
+  color: #007bff;
+}
+
+.login-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Profile Section */
+.profile-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-section h1 {
+  margin: 10px 0 5px;
+  font-size: 24px;
+}
+
+.role {
+  color: #888;
+  font-size: 16px;
+}
+
+.desc {
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Featured Products */
+.featured-products {
+  padding: 40px 80px;
+}
+
+.featured-products h2 {
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 260px;
+  padding-bottom: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+/* About Me */
+.about-me {
+  padding: 40px 80px;
+  background-color: #f4f6f8;
+}
+
+.about-me h2 {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+}

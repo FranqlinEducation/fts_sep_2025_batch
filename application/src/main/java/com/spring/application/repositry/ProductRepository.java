@@ -8,9 +8,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface ProductRepository extends JpaRepository<ProductEntity,Integer> {
 
 
@@ -25,7 +27,7 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Integer> 
     void deleteProductByProductName(@Param("productName") String productName);
 
 
-    @Query(value = "select new com.spring.application.ProductDto(user_name,product_name,product_description,product_image) from UserEntity u join ProductEntity p on u.user_id = p.user_id \n" +
+    @Query(value = "select new com.spring.application.ProductDto(u.user_name,p.product_name,p.product_description,p.product_image) from UserEntity u join ProductEntity p on u.user_id = p.user_id \n" +
             "where user_name = :userName")
     List<ProductDto> getProductDetailsByUserName(@Param("userName") String userName);
 }

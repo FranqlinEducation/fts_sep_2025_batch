@@ -9,43 +9,40 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/products")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*") // allow calls from frontend
 public class ProductController {
 
-    private ProductService productService;
+    private final ProductService productService;
 
-
-    // create products
-    @PostMapping(value = "products/save")
-    public ProductEntity createProduct(@RequestBody ProductEntity productEntity){
+    // Create product
+    @PostMapping("/save")
+    public ProductEntity createProduct(@RequestBody ProductEntity productEntity) {
         return productService.createProduct(productEntity);
     }
-    // get products
+
+    // Get all products
     @GetMapping
-    public List<ProductEntity> getAllProducts(){
+    public List<ProductEntity> getAllProducts() {
         return productService.getAllProducts();
     }
-    // delete products
 
+    // Delete product by name
     @DeleteMapping
-    public void deleteProduct(@RequestParam("productName") String productName){
+    public void deleteProduct(@RequestParam("productName") String productName) {
         productService.deleteProductByProductName(productName);
     }
-    // update products
 
-    @PutMapping(value = "/update")
-    public ProductEntity updateProduct(@RequestBody ProductEntity productEntity){
+    // Update product
+    @PutMapping("/update")
+    public ProductEntity updateProduct(@RequestBody ProductEntity productEntity) {
         return productService.updateProduct(productEntity);
     }
-    // get products by user name
 
-    public List<ProductDto> getProductDetails(String userName){
-        return  productService.getProductDetailsByUserName(userName);
+    // Get product details by user name
+    @GetMapping("/user/{userName}")
+    public List<ProductDto> getProductDetails(@PathVariable String userName) {
+        return productService.getProductDetailsByUserName(userName);
     }
-
-
-
-
-
-
 }

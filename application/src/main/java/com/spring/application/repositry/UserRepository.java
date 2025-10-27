@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 public interface UserRepository extends JpaRepository<UserEntity,Integer> {
 
 
-    @Query(value = "select * from t_user where user_name= :userName",nativeQuery = true)
+    @Query(value = "select * from t_users where user_name= :userName",nativeQuery = true)
     UserEntity getUserDetails(String userName);
 }

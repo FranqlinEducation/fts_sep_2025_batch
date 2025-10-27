@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductService {
 
-    private static ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public ProductEntity createProduct(ProductEntity productEntity) {
         return productRepository.save(productEntity);

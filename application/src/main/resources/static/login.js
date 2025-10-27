@@ -10,7 +10,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
   }
 
   try {
-    const response = await fetch("/login", {
+    const response = await fetch("http://localhost:8080/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -19,16 +19,14 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     });
 
     if (response.ok) {
-      const result = await response.text(); // backend returns string
+      const result = await response.text();
       alert("Login successful: " + result);
-      // Redirect if needed:
-      // window.location.href = "/dashboard";
     } else {
       const errorText = await response.text();
       alert("Login failed: " + errorText);
     }
   } catch (err) {
     console.error("Error during login:", err);
-    alert("An error occurred. Please try again.");
+    alert("Login failed: " + err);
   }
 });
