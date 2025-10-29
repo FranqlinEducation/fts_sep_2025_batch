@@ -1,0 +1,86 @@
+AI (Artificial Intelligence)
+GPT
+
+ChatGPT
+
+Copilot
+
+Azure OpenAI
+
+Perplexity
+
+GitHub Copilot
+
+Full form: Generative Pre-trained Transformer
+
+LLMs (Large Language Models)
+
+Used for:
+
+Coding
+
+Research
+
+Testing
+
+Example:
+
+A person aged between 10 to 14 years, if they watch movies or cartoons daily, can develop better imaginative and analytical thinking abilities related to storytelling and emotions.
+
+Prompt Engineering Techniques
+1) Zero-Shot Technique
+
+Definition:
+Used without providing any examples.
+
+Example Prompt:
+
+“Need information related to politics in the document.”
+
+2) Few-Shot Technique
+
+Definition:
+Used by providing a few examples or additional context to guide the response.
+
+Example Prompt:
+
+Need information related to politics for the document.
+Related to: India → Andhra Pradesh
+Number of pages: 5
+Years: Last 2 years
+
+3) Chain-of-Thought Technique
+
+Definition:
+Used to make the model explain its reasoning step-by-step before arriving at an answer.
+
+Example Prompt:
+
+Need information related to politics for the document.
+Related to: India → Andhra Pradesh
+Number of pages: 5
+Years: Last 2 years
+
+4) Role-Based Technique
+
+Definition:
+Assigns a specific role or persona to the model to improve the relevance and expertise of responses.
+
+Example Prompt:
+
+Role: You are an expert in political knowledge.
+Input:
+
+Related to: India → Andhra Pradesh
+
+Number of pages: 5
+
+Years: Last 2 years
+
+Sample Data:
+
+Header of the document: "FTS PVT LTD"
+
+Content: ---data---
+
+Footer of the document: "FTS PVT LTD"
